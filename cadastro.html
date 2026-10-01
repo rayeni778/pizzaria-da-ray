@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta | Forno & Chapa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cadastro">
+  <header class="topo">
+    <a class="logo" href="index.html">Forno <span>&amp;</span> Chapa</a>
+    <nav><a href="index.html">Cardápio</a><a href="login.html">Entrar</a></nav>
+  </header>
+
+  <main class="auth">
+    <form id="form-cadastro" class="card-form" novalidate>
+      <h1>Criar conta</h1>
+      <p class="ajuda">Precisamos do seu endereço para entregar o pedido.</p>
+      <div id="msg" class="msg" role="alert"></div>
+
+      <label>Nome completo<input name="nome" required autocomplete="name"></label>
+      <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+      <label>Telefone<input name="telefone" type="tel" required autocomplete="tel" placeholder="(32) 99999-9999"></label>
+      <label>Senha (mínimo 6 caracteres)<input name="senha" type="password" minlength="6" required autocomplete="new-password"></label>
+
+      <fieldset>
+        <legend>Endereço de entrega</legend>
+        <label>Rua<input name="rua" required></label>
+        <div class="linha">
+          <label>Número<input name="numero" required></label>
+          <label>Bairro<input name="bairro" required></label>
+        </div>
+        <label>Cidade<input name="cidade" required></label>
+      </fieldset>
+
+      <button class="btn" type="submit">Criar conta</button>
+      <p class="ajuda">Já tem conta? <a href="login.html">Entrar</a></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
